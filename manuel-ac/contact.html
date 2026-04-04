@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Manuel's AC & Cooling</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">❄</span>
+        <span class="logo-text">Manuel's <span class="accent">AC</span> & Cooling</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html#schedule" class="nav-cta">Schedule Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Reach out any time — Manuel responds fast.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+
+      <!-- Info Column -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <div class="contact-method">
+          <span class="cm-icon">📞</span>
+          <div>
+            <strong>Call or Text</strong>
+            <a href="tel:+12105550000">(210) 555-0000</a>
+            <small>Fastest way to reach us</small>
+          </div>
+        </div>
+        <div class="contact-method">
+          <span class="cm-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:manuel@manuelsac.com">manuel@manuelsac.com</a>
+            <small>We respond within a few hours</small>
+          </div>
+        </div>
+        <div class="contact-method">
+          <span class="cm-icon">🕐</span>
+          <div>
+            <strong>Hours</strong>
+            <p>Mon – Sat: 7:00 AM – 8:00 PM<br>Emergency calls: 24/7</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <span class="cm-icon">📍</span>
+          <div>
+            <strong>Service Area</strong>
+            <p>San Antonio & all of Bexar County</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div class="contact-form-wrap" id="schedule">
+        <h2>Schedule a Service Call</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(210) 555-1234" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>AC Repair</option>
+              <option>AC Installation</option>
+              <option>Maintenance / Tune-Up</option>
+              <option>Mini-Split System</option>
+              <option>Not sure — need a diagnosis</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="preferred">Preferred Time</label>
+            <select id="preferred" name="preferred">
+              <option value="" disabled selected>Select a time</option>
+              <option>Morning (7am – 12pm)</option>
+              <option>Afternoon (12pm – 5pm)</option>
+              <option>Evening (5pm – 8pm)</option>
+              <option>Emergency / ASAP</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us what's going on</label>
+            <textarea id="message" name="message" rows="4" placeholder="Describe the issue or what you need..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+          <p class="form-note">* We'll call you back to confirm your appointment.</p>
+        </form>
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="success-icon">✅</div>
+          <h3>Request Sent!</h3>
+          <p>Thanks! Manuel will call you back shortly to confirm your appointment.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo"><span class="accent">❄</span> Manuel's AC &amp; Cooling</p>
+        <p>San Antonio, TX<br>Serving all of Bexar County</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#schedule">Schedule Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+12105550000">(210) 555-0000</a></p>
+        <p><a href="mailto:manuel@manuelsac.com">manuel@manuelsac.com</a></p>
+        <p>Mon–Sat: 7am–8pm<br>Emergency: 24/7</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Manuel's AC & Cooling. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
