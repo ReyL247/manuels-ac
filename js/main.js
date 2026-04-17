@@ -1,4 +1,4 @@
-// Manuel's AC & Cooling — main.js
+// Manoel's AC & Cooling - main.js
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -9,27 +9,31 @@ document.addEventListener('DOMContentLoaded', () => {
   if (toggle && navLinks) {
     toggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
     });
 
     // Close nav when a link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
   // --- Sticky header shadow on scroll ---
   const header = document.querySelector('.site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header.style.boxShadow = '0 2px 20px rgba(0,0,0,.25)';
-    } else {
-      header.style.boxShadow = 'none';
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,.25)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+  }
 
-  // --- Contact form submission (demo — replace with real backend/formspree) ---
+  // --- Contact form submission fallback via email draft ---
   const form = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
 
@@ -37,23 +41,40 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // TODO: Replace this block with a real form submission (Formspree, EmailJS, etc.)
-      // Example with Formspree:
-      // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      //   method: 'POST',
-      //   body: new FormData(form),
-      //   headers: { Accept: 'application/json' }
-      // }).then(res => { if (res.ok) showSuccess(); });
+      const data = new FormData(form);
+      const firstName = (data.get('fname') || '').toString().trim();
+      const lastName = (data.get('lname') || '').toString().trim();
+      const fullName = `${firstName} ${lastName}`.trim();
+      const phone = (data.get('phone') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      const service = (data.get('service') || '').toString().trim();
+      const preferred = (data.get('preferred') || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
 
-      // For now, simulate success after short delay
       const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending...';
+      btn.textContent = 'Opening Email...';
       btn.disabled = true;
+
+      const subject = `Service Request: ${service || 'HVAC Service'} - ${fullName || 'Website Lead'}`;
+      const bodyLines = [
+        'New service request from the website:',
+        '',
+        `Name: ${fullName || 'Not provided'}`,
+        `Phone: ${phone || 'Not provided'}`,
+        `Email: ${email || 'Not provided'}`,
+        `Service Needed: ${service || 'Not specified'}`,
+        `Preferred Time: ${preferred || 'Not specified'}`,
+        '',
+        'Details:',
+        message || 'No additional details provided.'
+      ];
+
+      window.location.href = `mailto:manuel@manuelsac.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
       setTimeout(() => {
         form.style.display = 'none';
         if (formSuccess) formSuccess.style.display = 'block';
-      }, 1000);
+      }, 350);
     });
   }
 
@@ -68,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(hash);
       if (target) {
         e.preventDefault();
-        const offset = 80; // header height
+        const offset = 80;
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }
