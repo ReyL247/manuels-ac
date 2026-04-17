@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Polar Bear Air Conditioning & Heating</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">❄</span>
-        <span class="logo-text">Polar Bear <span class="accent">Air</span> Conditioning & Heating</span>
+      <a href="index.html" class="nav-logo" aria-label="Polar Bear Air Conditioning & Heating home">
+        <img src="assets/polar-bear-logo.jpg" alt="Polar Bear Air Conditioning & Heating logo" class="nav-logo-image" />
+        <span class="sr-only">Polar Bear Air Conditioning & Heating</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -33,7 +33,7 @@
   <section class="page-hero">
     <div class="container">
       <h1>Our Services</h1>
-      <p>Everything your AC system needs — installed right, repaired fast, and maintained well.</p>
+      <p>Everything your AC system needs, installed right, repaired fast, and maintained well.</p>
     </div>
   </section>
 
@@ -41,10 +41,10 @@
     <div class="container services-detail">
 
       <div class="service-detail-card" id="repair">
-        <div class="sdc-icon">🔧</div>
+        <div class="sdc-icon">Repair</div>
         <div class="sdc-content">
           <h2>AC Repair</h2>
-          <p>When your AC breaks down, you need someone fast. Manuel responds quickly and diagnoses the problem accurately — no guessing, no unnecessary parts. Most repairs are completed same day.</p>
+          <p>When your AC breaks down, you need someone fast. Manuel responds quickly and diagnoses the problem accurately with no guessing and no unnecessary parts. Most repairs are completed same day.</p>
           <ul class="service-includes">
             <li>All makes and models</li>
             <li>Refrigerant leak detection &amp; recharge</li>
@@ -58,10 +58,10 @@
       </div>
 
       <div class="service-detail-card" id="install">
-        <div class="sdc-icon">🏠</div>
+        <div class="sdc-icon">Install</div>
         <div class="sdc-content">
           <h2>AC Installation</h2>
-          <p>Replacing an old system? Manuel will help you choose the right unit for your home's size and layout — no upselling, just honest guidance. Installs include full startup testing and a walkthrough of your new system.</p>
+          <p>Replacing an old system? Manuel will help you choose the right unit for your home's size and layout with no upselling, just honest guidance. Installs include full startup testing and a walkthrough of your new system.</p>
           <ul class="service-includes">
             <li>New system consultation &amp; sizing</li>
             <li>Central AC installation</li>
@@ -75,10 +75,10 @@
       </div>
 
       <div class="service-detail-card" id="maintenance">
-        <div class="sdc-icon">📋</div>
+        <div class="sdc-icon">Tune-Up</div>
         <div class="sdc-content">
           <h2>Maintenance Tune-Up</h2>
-          <p>Regular maintenance extends the life of your AC system and keeps your energy bills in check. A tune-up with Manuel is thorough — not a 10-minute checkbox visit.</p>
+          <p>Regular maintenance extends the life of your AC system and keeps your energy bills in check. A tune-up with Manuel is thorough and never a 10-minute checkbox visit.</p>
           <ul class="service-includes">
             <li>Full system inspection</li>
             <li>Coil cleaning (evaporator &amp; condenser)</li>
@@ -92,7 +92,7 @@
       </div>
 
       <div class="service-detail-card" id="mini-split">
-        <div class="sdc-icon">💨</div>
+        <div class="sdc-icon">Ductless</div>
         <div class="sdc-content">
           <h2>Mini-Split Systems</h2>
           <p>Mini-splits are perfect for garages, home offices, server rooms, or any space your main system can't reach. Manuel installs and services all major brands.</p>
@@ -101,7 +101,7 @@
             <li>Ductless installation</li>
             <li>Garage &amp; addition cooling</li>
             <li>Commercial/retail applications</li>
-            <li>Brand: Mitsubishi, Daikin, LG, and more</li>
+            <li>Brands: Mitsubishi, Daikin, LG, and more</li>
           </ul>
           <a href="contact.html#schedule" class="btn btn-primary">Get a Quote</a>
         </div>
@@ -112,16 +112,19 @@
 
   <section class="cta-strip">
     <div class="container cta-strip-inner">
-      <h2>Not sure what you need? Just call — Manuel will figure it out.</h2>
-      <a href="tel:+12109991867" class="btn btn-primary">📞 (210) 999-1867</a>
+      <h2>Not sure what you need? Just call and Manuel will figure it out.</h2>
+      <a href="tel:+12109991867" class="btn btn-primary">Call (210) 999-1867</a>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <p class="footer-logo"><span class="accent">❄</span> Polar Bear Air Conditioning &amp; Heating</p>
-        <p>San Antonio, TX<br>Serving all of Bexar County</p>
+        <a href="index.html" class="footer-logo" aria-label="Polar Bear Air Conditioning & Heating home">
+          <img src="assets/polar-bear-logo.jpg" alt="Polar Bear Air Conditioning & Heating logo" class="footer-logo-image" />
+          <span class="sr-only">Polar Bear Air Conditioning & Heating</span>
+        </a>
+        <p>San Antonio, TX<br />Serving all of Bexar County</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -136,11 +139,11 @@
         <h4>Contact</h4>
         <p><a href="tel:+12109991867">(210) 999-1867</a></p>
         <p><a href="mailto:manuel@manuelsac.com">manuel@manuelsac.com</a></p>
-        <p>Mon–Sat: 7am–8pm<br>Emergency: 24/7</p>
+        <p>Mon-Sat: 7am-8pm<br />Emergency: 24/7</p>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2025 Polar Bear Air Conditioning &amp; Heating. All rights reserved.</p>
+      <p>&copy; 2025 Polar Bear Air Conditioning &amp; Heating. All rights reserved.</p>
     </div>
   </footer>
 

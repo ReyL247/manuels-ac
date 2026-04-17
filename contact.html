@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Polar Bear Air Conditioning & Heating</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">❄</span>
-        <span class="logo-text">Polar Bear <span class="accent">Air</span> Conditioning & Heating</span>
+      <a href="index.html" class="nav-logo" aria-label="Polar Bear Air Conditioning & Heating home">
+        <img src="assets/polar-bear-logo.jpg" alt="Polar Bear Air Conditioning & Heating logo" class="nav-logo-image" />
+        <span class="sr-only">Polar Bear Air Conditioning & Heating</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -33,18 +33,17 @@
   <section class="page-hero">
     <div class="container">
       <h1>Contact Us</h1>
-      <p>Reach out any time — Manuel responds fast.</p>
+      <p>Reach out any time and Manuel responds fast.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container contact-layout">
 
-      <!-- Info Column -->
       <div class="contact-info">
         <h2>Get in Touch</h2>
         <div class="contact-method">
-          <span class="cm-icon">📞</span>
+          <span class="cm-icon">Call</span>
           <div>
             <strong>Call or Text</strong>
             <a href="tel:+12109991867">(210) 999-1867</a>
@@ -52,7 +51,7 @@
           </div>
         </div>
         <div class="contact-method">
-          <span class="cm-icon">✉️</span>
+          <span class="cm-icon">Email</span>
           <div>
             <strong>Email</strong>
             <a href="mailto:manuel@manuelsac.com">manuel@manuelsac.com</a>
@@ -60,14 +59,14 @@
           </div>
         </div>
         <div class="contact-method">
-          <span class="cm-icon">🕐</span>
+          <span class="cm-icon">Hours</span>
           <div>
             <strong>Hours</strong>
-            <p>Mon – Sat: 7:00 AM – 8:00 PM<br>Emergency calls: 24/7</p>
+            <p>Mon-Sat: 7:00 AM - 8:00 PM<br />Emergency calls: 24/7</p>
           </div>
         </div>
         <div class="contact-method">
-          <span class="cm-icon">📍</span>
+          <span class="cm-icon">Area</span>
           <div>
             <strong>Service Area</strong>
             <p>San Antonio, Texas</p>
@@ -75,7 +74,6 @@
         </div>
       </div>
 
-      <!-- Form Column -->
       <div class="contact-form-wrap" id="schedule">
         <h2>Schedule a Service Call</h2>
         <form class="contact-form" id="contactForm">
@@ -105,7 +103,7 @@
               <option>AC Installation</option>
               <option>Maintenance / Tune-Up</option>
               <option>Mini-Split System</option>
-              <option>Not sure — need a diagnosis</option>
+              <option>Not sure - need a diagnosis</option>
               <option>Other</option>
             </select>
           </div>
@@ -113,9 +111,9 @@
             <label for="preferred">Preferred Time</label>
             <select id="preferred" name="preferred">
               <option value="" disabled selected>Select a time</option>
-              <option>Morning (7am – 12pm)</option>
-              <option>Afternoon (12pm – 5pm)</option>
-              <option>Evening (5pm – 8pm)</option>
+              <option>Morning (7am - 12pm)</option>
+              <option>Afternoon (12pm - 5pm)</option>
+              <option>Evening (5pm - 8pm)</option>
               <option>Emergency / ASAP</option>
             </select>
           </div>
@@ -127,7 +125,7 @@
           <p class="form-note">* We'll call you back to confirm your appointment.</p>
         </form>
         <div class="form-success" id="formSuccess" style="display:none;">
-          <div class="success-icon">✅</div>
+          <div class="success-icon">Thank You</div>
           <h3>Request Sent!</h3>
           <p>Thanks! Manuel will call you back shortly to confirm your appointment.</p>
         </div>
@@ -139,8 +137,11 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <p class="footer-logo"><span class="accent">❄</span> Polar Bear Air Conditioning &amp; Heating</p>
-        <p>San Antonio, TX<br>Serving all of Bexar County</p>
+        <a href="index.html" class="footer-logo" aria-label="Polar Bear Air Conditioning & Heating home">
+          <img src="assets/polar-bear-logo.jpg" alt="Polar Bear Air Conditioning & Heating logo" class="footer-logo-image" />
+          <span class="sr-only">Polar Bear Air Conditioning & Heating</span>
+        </a>
+        <p>San Antonio, TX<br />Serving all of Bexar County</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -155,11 +156,11 @@
         <h4>Contact</h4>
         <p><a href="tel:+12109991867">(210) 999-1867</a></p>
         <p><a href="mailto:manuel@manuelsac.com">manuel@manuelsac.com</a></p>
-        <p>Mon–Sat: 7am–8pm<br>Emergency: 24/7</p>
+        <p>Mon-Sat: 7am-8pm<br />Emergency: 24/7</p>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2025 Polar Bear Air Conditioning &amp; Heating. All rights reserved.</p>
+      <p>&copy; 2025 Polar Bear Air Conditioning &amp; Heating. All rights reserved.</p>
     </div>
   </footer>
 
